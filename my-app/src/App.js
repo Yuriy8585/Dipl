@@ -18,7 +18,10 @@ import logo from './img/logo.jpg';
 import search from './img/search.svg';
 import registration from './img/reg.svg';
 import cart from './img/cart.svg';
-import menu from './img/menu.svg'
+import menu from './img/menu.svg';
+import CheckoutForm from './components/payment/CheckoutForm';
+import PaymentComponent from './components/payment/payment';
+
 
 
 
@@ -28,6 +31,8 @@ function App() {
     return (
 
         <div>
+            
+            
             <div className="App">
                 <BrowserRouter>
 
@@ -77,8 +82,11 @@ function App() {
                         <Route path="/KIDS" element={<CatalogKids gistsArray={gistsArray}/>}/>
                         <Route path="/NEW ARRIVALS" element={<div>NEW ARRIVALS</div>}/>
                         <Route path="/REGISTRATION" element={<Registration/>}/>
+                        <Route path="/Form" element={<CheckoutForm/>}/>
+                        <Route path="/Payment" element={<PaymentComponent/>}/>
                         <Route path="/404" element={<Page404/>}/>
                         <Route path="*" element={<Navigate replace to="/404"/>}/>
+                        
                     </Routes>
 
                 </BrowserRouter>

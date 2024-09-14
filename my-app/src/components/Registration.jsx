@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
-
+//import {connect} from "react-redux";
+import { Link } from 'react-router-dom';
 
 function Registration () {
   const [username, setUsername] = useState('');
@@ -65,7 +66,8 @@ function Registration () {
           {errors.confirmPassword && <div style={{ color: 'ed' }}>{errors.confirmPassword}</div>}
         </label>
         <br />
-        <button type="submit">Register</button>
+        
+        <button> <Link className="button" to="*">Register</Link></button>
       </form>
     </div>
   

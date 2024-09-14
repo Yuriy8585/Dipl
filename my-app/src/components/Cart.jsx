@@ -1,14 +1,16 @@
-import GistsList, {API_URL_PUBLIC} from './items/GistsList';
+//import GistsList, {API_URL_PUBLIC} from './items/GistsList';
 import React, {useCallback, useEffect, useState} from "react";
 import CircularProgress from "@mui/material/CircularProgress";
 import {connect} from "react-redux";
+import { Link } from 'react-router-dom';
+//import CheckoutForm from './payment/CheckoutForm';
+
 
 
 function Cart(props) {
 
 
-    {/*<GistsList />*/
-    }
+   // {/*<GistsList />*/    }
     const [gists, setGists] = useState(useState({id: 0, description: ""}));
     const [error, setError] = useState(false);
     const [loading, setLoading] = useState(true);
@@ -59,7 +61,7 @@ function Cart(props) {
         return (<p>No gists</p>);
     }
     return (
-
+        
         <div>
             <br></br>
             <h1>Shop Items</h1>
@@ -87,6 +89,7 @@ function Cart(props) {
             <h2>{gists.description}<p className="product-description"></p></h2>
 
             <button onClick={renderGist} className="button"> Submit </button>
+            <button> <Link className="button" to="/Form">SUBMIT</Link></button>
         </div>
     );
 }
